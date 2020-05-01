@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "swing": "^4.0.1"
+    "swing": "^4.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "webpack": "^1.14.0",
@@ -8,6 +9,9 @@
   },
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --entry ./index.js"
-  }
+    "start": "webpack-dev-server --entry ./index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
